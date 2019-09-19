@@ -27,6 +27,8 @@ table:
   database: story
 ```
 
+Postgres
+
 ```sql
 CREATE TABLE story (
     id bigserial NOT NULL,
@@ -35,3 +37,7 @@ CREATE TABLE story (
     CONSTRAINT story_pk PRIMARY KEY (id)
 );
 ```
+
+## CSV 导入数据库
+
+为csv表格自动创建合适的表并写入数据。
