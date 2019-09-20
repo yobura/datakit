@@ -6,25 +6,24 @@
 - 自动生成HTTP接口
 
 ```yaml
-database:
-  story:
-    schemas:
-      public:
-        tables:
-          story:
-            columns:
-              id:
-                type: auto_increment
-              title:
-                type: varchar
-                length: 1000
-                default: "Untitled story"
-                nullable: false
 
-              article:
-                type: text
-                default: "Writing"
-                nullable: true
+tables:
+  $database: story
+  $schema: public
+  story:
+    columns:
+      id:
+        type: auto_increment
+      title:
+        type: varchar
+        length: 1000
+        default: "Untitled story"
+        nullable: false
+
+      article:
+        type: text
+        default: "Writing"
+        nullable: true
 ```
 
 Postgres
