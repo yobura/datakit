@@ -33,11 +33,15 @@ Postgres
 CREATE TABLE story (
     id bigserial NOT NULL,
     title varchar(1000) NOT NULL DEFAULT "Untitled story",
-    article varchar(1000) NULL,
+    article text NULL,
     CONSTRAINT story_pk PRIMARY KEY (id)
 );
 ```
 
 ## CSV 导入数据库
 
-为csv表格自动创建合适的表并写入数据。
+使用`dk load`指令加载csv文件，这个过程会自动创建对应的csv表格。
+
+```
+$ dk load --table story stories.csv
+```
